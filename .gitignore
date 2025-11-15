@@ -1,0 +1,33 @@
+Document3(1).pdf
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Other files
+../exemple code connexion.html
+../exemple user profile.html
+../exmple chatbot page.html
+../exmple user scrolling page.html
+../Document3(1).pdf
+../Gemini.md

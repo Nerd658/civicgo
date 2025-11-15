@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>City Helper Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13a4ec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden">
+<!-- Top App Bar -->
+<header class="flex shrink-0 items-center justify-between border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 py-3 shadow-sm">
+<div class="flex items-center gap-3">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="City Helper mascot, a friendly robot icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtrq8ul6B10NkXBOpOfckks8-tTDh80dC8CNHW9YBWc_dErwexujl7IS55fBSSL5s4mqqkYtnjasPyQ5BioL6VyLfufI2d1Ma7Gjc1cdxj48ZH4FGjM3Nty7Y36Ec1txhidqWiPQtHe0LnwSti3ZqCuh8YwyS3vAjzHA2DJAnGeUk-kfvsKH9PeGBOtRe9Pkhe-raaU_8L1s_8Yf21OVdnU-DTh5lGW1GM1uH3FOZ8RebxLloBZKF1RTosie4EMUm5zo8M5a3PUIz-');"></div>
+<h1 class="text-lg font-bold leading-tight tracking-tight text-gray-900 dark:text-white">City Helper</h1>
+</div>
+<div class="flex items-center">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Chat History -->
+<main class="flex-1 overflow-y-auto p-4">
+<div class="flex flex-col gap-4">
+<!-- Chatbot Greeting -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="City Helper mascot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBb0Id_0oVsLmh-eNRQ1Ygp6rkqz_jJ5_G3RP88KC5r2buF2-uFZDEXfQJld75mpURmE8u86aZZbcIOCIPPm0MrQK92bnT6yer2ABIJmYPShrCl0sDpNV5LvrYdKRihVqyPFVE82cXNtgo9jfDHiWAlgX45zwc9OHk-LPs9wbWirAy7zgw749_lN3c0VRFl0fVAEtqydUUxfeApFD5WTC0m5xMcK6YfgbHtY8Emyf0-6uRdKX8_gECEaaAomqya2lXez-fM2NfYPkml');"></div>
+<div class="flex flex-1 flex-col gap-1.5 items-start">
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400 max-w-[360px]">City Helper</p>
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg rounded-bl-none px-4 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-sm">
+              Hello! I'm your City Helper. I can assist you with local events, public services, or reporting issues. How can I help you today?
+            </p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1.5 items-end">
+<p class="text-sm font-medium text-gray-600 dark:text-gray-400 max-w-[360px] text-right">You</p>
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg rounded-br-none px-4 py-3 bg-primary text-white shadow-sm">What are the recent announcements?</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="User avatar with initials" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqDIEES7VQs3iuVpJTFaCIPmz1HpmOJ2LloNlZqfCkO2Lbc0cG6l-05dVHp7SSHmWkmUeWasDt1Q4e8Cox4Wk1SA20lfcwxcP0rWWZOzMayYVwT34VuhIcG2FOZcy8TLrBljVMC61ZYhRuVuzPl1DVkK3bOFILB0yILNOWGD5yLPN8OOes2q2DaYoEKVjYy-P3IkvdH46h1B5I9mb3OWh9WMfHBErg7jzdxcGLuZej8vJbU-SW67bKLzfrT_4qKdnnjAmu40efhZ_R");'></div>
+</div>
+<!-- Typing Indicator -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="City Helper mascot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkrJfXNL230Q7po4zIozYT8lCl_K6vjsG9hx7OupBnFhZnpd8cgqKEL-BkcHVypEoN1Yg4mvYbLbdxryXcjASPq0FS0LS7PyNH1AW8ndZyMnZ0FzLX3gwJv2NuSwmWGJ5OAFjkcPBDJWwtlBk8FsJLA2MErt_vc8AylbkgWG9Cx2C_cbd-4BaZHWtg48X0kW6t0v7zK-szRaS_O-T2PUIIVBNRzZ6fFcpAUXtTkRsKgWR8bKTyqZ-HU7KLBeBBgUFfn5KgOlJQQqLv');"></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<div class="flex h-12 w-20 items-center justify-center rounded-lg rounded-bl-none bg-white dark:bg-gray-800 px-4 py-3 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 animate-pulse rounded-full bg-gray-400 [animation-delay:-0.3s]"></span>
+<span class="h-2 w-2 animate-pulse rounded-full bg-gray-400 [animation-delay:-0.15s]"></span>
+<span class="h-2 w-2 animate-pulse rounded-full bg-gray-400"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Input Area -->
+<footer class="flex flex-col shrink-0 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 pt-3 pb-4 shadow-sm">
+<!-- Quick Reply Chips -->
+<div class="flex gap-2 pb-3 overflow-x-auto">
+<button class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-gray-800 px-4 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
+<p class="text-sm font-medium text-gray-800 dark:text-gray-200">Recent announcements</p>
+</button>
+<button class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-gray-800 px-4 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
+<p class="text-sm font-medium text-gray-800 dark:text-gray-200">Find a service</p>
+</button>
+<button class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-gray-800 px-4 transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
+<p class="text-sm font-medium text-gray-800 dark:text-gray-200">Contact support</p>
+</button>
+</div>
+<!-- Text Input -->
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<input class="w-full rounded-full border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 py-2.5 pl-4 pr-12 text-base text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:border-primary focus:ring-primary" placeholder="Ask a question..." type="text"/>
+</div>
+<button class="flex h-11 w-11 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-white transition-colors hover:bg-primary/90">
+<span class="material-symbols-outlined text-2xl">send</span>
+</button>
+</div>
+</footer>
+</div>
+</body></html>

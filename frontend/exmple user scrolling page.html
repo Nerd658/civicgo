@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CivicFeed Mobile App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-md flex-col overflow-x-hidden font-display dark" style="padding-bottom: 80px;">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<div class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary">campaign</span>
+</div>
+<h2 class="ml-2 flex-1 text-xl font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white">CivicFeed</h2>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button class="relative flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<div class="absolute right-2 top-2 h-2.5 w-2.5 rounded-full border-2 border-background-light bg-red-500 dark:border-background-dark"></div>
+</button>
+</div>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 overflow-x-auto p-4 pt-2 [-ms-overflow-style:none] [scrollbar-width:none]">
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary pl-4 pr-4">
+<p class="text-white text-sm font-medium leading-normal">All</p>
+</div>
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-700/60 pl-4 pr-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Proposals</p>
+</div>
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-700/60 pl-4 pr-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Local Events</p>
+</div>
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-700/60 pl-4 pr-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Following</p>
+</div>
+<div class="flex h-9 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-700/60 pl-4 pr-4">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Updates</p>
+</div>
+</div>
+<!-- Feed Content -->
+<div class="flex flex-col gap-3 px-4">
+<!-- Card 1: Proposal -->
+<div class="flex flex-col overflow-hidden rounded bg-white shadow-sm dark:bg-[#1C252C]">
+<div class="flex flex-col p-4">
+<div class="flex items-center gap-3">
+<img class="h-10 w-10 rounded-full" data-alt="User avatar for janesmith" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv7x3AADQAJUUaTqNi7XEWOsGVo0L2u_-30HDEvoHX9qLDjsrISH320Mv6iKTzNweMB6v4_fzGvypkWAHt96uA0V8ZhwdPr7woeOLL0DqtLAcnFORHNOAkgzVqwFsocjBEOsDQlb3oHl9K4c-1uRtwAreRXygfViWBzFuuMHTUCioBJ05dglIzKFYIXO2FRLzqq25iUXiU5ofeQj9A6mgjiwDqFFYKNHu7pUHK2Oesmb1oRjnSI9slOwxILtgthXQpMjoGzkB_Y9aJ"/>
+<div class="flex-1">
+<p class="text-base font-bold text-slate-800 dark:text-white">Jane Smith</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">janesmith • 2h ago</p>
+</div>
+</div>
+<p class="mt-4 text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white">Petition to add a new bike lane on Main St.</p>
+<p class="mt-2 text-base text-slate-600 dark:text-slate-300">Our community would greatly benefit from a dedicated bike lane on Main Street to improve safety for cyclists and reduce traffic congestion. Let's make our voices heard!</p>
+</div>
+<div class="aspect-video w-full bg-cover bg-center" data-alt="A sunny street with a painted bike lane and a person cycling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZUtayDmabtBhCvIqwHB6L8bHGgwi1wVa9JZfK5u4rCsSMKL5i3XaqTFaDUd9j-VVuGM4u3wl8kXEuucvj9VIgVbsUbvSisHVyMNM6sCJlA924vcy2SkDBKAPPzySW1xs4OVkrrxpXsaIHbSw172sPKeYbEbOEFrpUAy-74G-lIZaZSdfRP8nUA2io8N4bWhKLNLpKJUhg0Fktzk3hP-P8-SN843YsZw59E62FK4-tFHk9FbyS0xkufU0gGpOLbyPbXcuZk1VUcN4m");'></div>
+<div class="p-4 pt-2">
+<div class="mb-2 flex items-center justify-between">
+<p class="text-xs font-semibold uppercase tracking-wider text-green-500 dark:text-green-400">New Proposal</p>
+<button class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-4 text-sm font-medium leading-normal text-white">
+<span class="truncate">Learn More</span>
+</button>
+</div>
+<div class="my-2 h-px bg-slate-200 dark:bg-slate-700/60"></div>
+<div class="flex flex-wrap justify-between">
+<div class="flex items-center justify-center gap-2 px-3 py-2">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">thumb_up</span>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">1.2k</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">chat_bubble</span>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">48</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">share</span>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">12</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Event -->
+<div class="flex flex-col overflow-hidden rounded bg-white shadow-sm dark:bg-[#1C252C]">
+<div class="flex flex-col p-4">
+<div class="flex items-center gap-3">
+<img class="h-10 w-10 rounded-full" data-alt="User avatar for communityhelpers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd955TL__v21VJZwHL-aSR0kxtle-og6d2DHTZGIkf692QkSctL7OtKpDS_incUMMguWSsFvYRfXo_ZJC35rPks2EDWSjhCXnpfmRmV1qLdnZfzu523cSduMA15acl5UdcwrIiK8TVVV_uXDirkHhEHTEQN8hb6aqFNbfUrosANCgIHHOa7FfzFFSYE-9vOLBrHrtRC--QwYShemRen4MPD4hKJdya6p5WcNnQ4Bg58mPjO-cDh3BrxEUTIuNOlTB5moexbtQEWJnt"/>
+<div class="flex-1">
+<p class="text-base font-bold text-slate-800 dark:text-white">Community Helpers</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">communityhelpers • 1d ago</p>
+</div>
+</div>
+<p class="mt-4 text-lg font-bold leading-tight tracking-[-0.015em] text-slate-900 dark:text-white">Community park cleanup this Saturday</p>
+<p class="mt-2 text-base text-slate-600 dark:text-slate-300">Join us this Saturday at 9 AM at Central Park for our monthly cleanup event. Gloves and bags will be provided. Let's make our park beautiful together!</p>
+</div>
+<div class="aspect-video w-full bg-cover bg-center" data-alt="Group of volunteers cleaning a park" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdsMOqT8Xt32tRjwPXxs9mQb_CJhJuvBXiqLIbMVvyquf_R3FF7xHCpbu982CFfvrzX2H7KQtRfhLHmbYSIe8NFIs6aDOXUzmOEzF5mKGsyDJEviF1t9SpxfcLJbRuWiXzbt5YJ3EO1XGb5kCk81AHPu19hLv54q1z4NkC9HCL923UAXsRR_WbDKVjwBCp0GSw2D21HLcNVJx0g_wfy0-ruQrxeHHWxDGaqGYE_EN7Nhvs1Fzyz81dmUi2S7w-WRavTfBCqE0yj1KU");'></div>
+<div class="p-4 pt-2">
+<div class="mb-2 flex items-center justify-between">
+<p class="text-xs font-semibold uppercase tracking-wider text-orange-500 dark:text-orange-400">Event</p>
+<button class="flex h-9 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary px-4 text-sm font-medium leading-normal text-white">
+<span class="truncate">RSVP</span>
+</button>
+</div>
+<div class="my-2 h-px bg-slate-200 dark:bg-slate-700/60"></div>
+<div class="flex flex-wrap justify-between">
+<div class="flex items-center justify-center gap-2 px-3 py-2">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">thumb_up</span>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">345</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">chat_bubble</span>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">19</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">share</span>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] text-slate-500 dark:text-slate-400">8</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 flex h-14 w-14 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 z-10 w-full max-w-md border-t border-slate-200 bg-background-light/80 backdrop-blur-sm dark:border-slate-700/60 dark:bg-background-dark/80">
+<div class="flex h-20 items-center justify-around">
+<div class="flex cursor-pointer flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-xs font-bold">Home</p>
+</div>
+<div class="flex cursor-pointer flex-col items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-2xl">explore</span>
+<p class="text-xs font-medium">Discover</p>
+</div>
+<div class="flex cursor-pointer flex-col items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+<p class="text-xs font-medium">Chatbot</p>
+</div>
+<div class="flex cursor-pointer flex-col items-center gap-1 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-2xl">person</span>
+<p class="text-xs font-medium">Profile</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

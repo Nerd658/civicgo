@@ -1,0 +1,38 @@
+[
+    {
+        "user_id": 1,
+        "username": "hassan",
+        "email": "m3bikienga@gmail.com",
+        "password": "m3bikienga@gmail.com",
+        "role": "participant",
+        "points": 0,
+        "historique": [],
+        "age": 85
+    },
+    {
+        "user_id": 2,
+        "username": "Seck",
+        "email": "m7bikienga@gmail.com",
+        "password": "m7bikienga@gmail.com",
+        "role": "participant",
+        "points": 0,
+        "historique": [],
+        "age": 85
+    },
+    {
+        "user_id": 3,
+        "username": "TEST",
+        "email": "pour@pour.com",
+        "password": "pour@pour.com",
+        "role": "participant",
+        "points": 10,
+        "historique": [
+            {
+                "action_id": 1763175669995,
+                "action_title": "Nettoyage du parc",
+                "date": "2025-11-15T03:04:39.257829"
+            }
+        ],
+        "age": 54
+    }
+]

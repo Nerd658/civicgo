@@ -1,0 +1,44 @@
+[
+    {
+        "participation_id": "be6c83d4-264e-4353-91c8-732410ec781e",
+        "action_id": 1763171453252,
+        "user_id": 1,
+        "used": false
+    },
+    {
+        "participation_id": "223ca1bd-4637-4d08-b208-4226c366271d",
+        "action_id": 1763171453252,
+        "user_id": 1,
+        "used": false
+    },
+    {
+        "participation_id": "d8a50cc6-3636-4f14-9830-3be47d64b022",
+        "action_id": 1763171453252,
+        "user_id": 1,
+        "used": true
+    },
+    {
+        "participation_id": "1c7db7f5-4f12-4d24-afb0-47d9a958cf48",
+        "action_id": 1763171453252,
+        "user_id": 1,
+        "used": false
+    },
+    {
+        "participation_id": "844993c3-4ec7-4bb2-b412-6fd16ce3d8ab",
+        "action_id": 1763171453252,
+        "user_id": 1,
+        "used": true
+    },
+    {
+        "participation_id": "0efae026-bab3-411b-b457-6ca1fb15b5cd",
+        "action_id": 1763172212405,
+        "user_id": 1,
+        "used": true
+    },
+    {
+        "participation_id": "2ca418f2-a268-4101-be9f-dce6a7928214",
+        "action_id": 1763175669995,
+        "user_id": 3,
+        "used": true
+    }
+]
